@@ -41,3 +41,8 @@ nsqadmin:
     - nsqlookupd:nsqlookupd
   command: /nsqadmin --lookupd-http-address=nsqlookupd:4161
 
+mongo:
+  image: mongo
+  ports:
+    - "27017:27017"
+  command: mongod --dbpath ./db
